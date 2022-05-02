@@ -21,7 +21,7 @@ const notyf = new Notyf({
       const title = formRef.elements.title.value.trim();
       const task = formRef.elements.task.value.trim();
   
-      if (!title || !task) return  notyf.success('Please fill in all');
+      if (!title || !task) return  notyf.success('Please fill in all fields');
   
       const todo = {
           title,
@@ -36,27 +36,6 @@ const notyf = new Notyf({
       
   }
   
-  // function onSubmit(event) {
-  //   event.preventDefault();
-  
-  //   const title = formRef.elements.title.value.trim();
-  //   const task = formRef.elements.task.value.trim();
-  
-  //   if (!title || !task) return notyf.error('Please fill in all fields');
-  
-  //   const todo = {
-  //     title,
-  //     task,
-  //     id: todos.length + 1,
-  //   };
-  
-  //   todos.push(todo);
-  //   formRef.reset();
-  //   notyf.success('Todo added');
-  
-  //   renderMarkup();
-  
-  // }
   
   function deleteTodo(event) {
     const { id } = event.target.dataset;
@@ -75,7 +54,7 @@ const notyf = new Notyf({
   
   function onToggleTodo(event) {
     const parentElement = event.target.parentNode.parentNode.parentNode;
-    console.log(event.target.parentNode.parentNode.parentNode);
+    // console.log(event.target.parentNode.parentNode.parentNode);
   
     event.target.checked
     ? parentElement.classList.add('bg-success')
@@ -98,11 +77,11 @@ const notyf = new Notyf({
             id="flexCheckDefault"
           />
           <label class="form-check-label" for="flexCheckDefault">
-            Completed
+            Label
           </label>
         </div>
         <button type="button" class="btn btn-primary js-btn" data-id=${id}>
-          Delete
+          Del
         </button>
       </div>
       </div>`).join('');
