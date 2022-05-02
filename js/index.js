@@ -75,11 +75,12 @@ function deleteTodo(event) {
 
 function onToggleTodo(event) {
   const parentElement = event.target.parentNode.parentNode.parentNode;
+  console.log(event.target.parentNode.parentNode.parentNode);
 
-  // event.target.checked 
-  // ? parentElement.cardList.add('bg-success') 
-  // : parentElement.cardList.remove('bg-success');
-}
+  event.target.checked
+  ? parentElement.classList.add('bg-success')
+  : parentElement.classList.remove('bg-success');
+ }
 
 
 function renderMarkup() {
