@@ -21,14 +21,14 @@ function onSubmit(e) {
     const title = formRef.elements.title.value.trim();
     const task = formRef.elements.task.value.trim();
 
-    if (!title || !task) return alert('Please fill in all');
+    if (!title || !task) return  notyf.success('Please fill in all');
 
     const todo = {
         title,
         task,
         id: todos.length + 1,
     }
-
+    console.table(todo);
     todos.push(todo);
     formRef.reset();
     renderMarkup();
@@ -66,7 +66,8 @@ function deleteTodo(event) {
       const todo = todos.find((todo) => todo.id === id);
       todos.splice(todos.indexOf(todo), 1);
       renderMarkup();
-      alert('Todo deleted');
+      notyf.success('Todo deleted');
+      // alert('Todo deleted');
   };
 };
 
@@ -75,9 +76,9 @@ function deleteTodo(event) {
 function onToggleTodo(event) {
   const parentElement = event.target.parentNode.parentNode.parentNode;
 
-  event.target.checked 
-  ? parentElement.cardList.add('bg-success') 
-  : parentElement.cardList.remove('bg-success');
+  // event.target.checked 
+  // ? parentElement.cardList.add('bg-success') 
+  // : parentElement.cardList.remove('bg-success');
 }
 
 
