@@ -199,24 +199,24 @@ const cars = [
   // Пусть функция getModels возвращает массив
   //  моделей (поле model) всех автомобилей.
   
-  // const getModels = (cars) => cars.map(({ model }) => model);
-  // console.table(getModels(cars));
+  const getModels = (cars) => cars.map(({ model }) => model);
+  console.table(getModels(cars));
   // ====================================
   // Example 2 - Метод map
   // Пусть функция makeCarsWithDiscount возвращает
   //  новый массив объектов с изменным значением
   // свойства price в зависимости от переданной скидки.
   
-  // const makeCarsWithDiscount = (cars, discount) =>
-  //   cars.map((car) => ({
-  //     ...car,
-  //     price: car.price - car.price * discount,
-  //   }));
+  const makeCarsWithDiscount = (cars, discount) =>
+    cars.map((car) => ({
+      ...car,
+      price: car.price - car.price * discount,
+    }));
   
-  // console.table(makeCarsWithDiscount(cars, 0.2));
-  // console.table(makeCarsWithDiscount(cars, 0.4));
-  // console.table(makeCarsWithDiscount(cars, 0.9));
-  // console.table(makeCarsWithDiscount(cars, 1));
+  console.table(makeCarsWithDiscount(cars, 0.2));
+  console.table(makeCarsWithDiscount(cars, 0.4));
+  console.table(makeCarsWithDiscount(cars, 0.9));
+  console.table(makeCarsWithDiscount(cars, 1));
   // ====================================
   // Example 3 - Метод filter
   // Пусть функция filterByPrice возвращает массив
