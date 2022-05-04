@@ -1,4 +1,5 @@
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// const { v4: uuidv4 } = require{'uuid'};
 const notyf = new Notyf({
   duration: 2000,
   position: {
@@ -33,7 +34,7 @@ function onSubmit(e) {
     formRef.reset();
     renderMarkup();
     console.table(todos);
-    
+
 }
 
 // function onSubmit(event) {
@@ -85,7 +86,7 @@ function onToggleTodo(event) {
 
 function renderMarkup() {
     cardList.innerHTML = "";
-    const markup = todos.map( ({title, task, id}) => ` 
+    const markup = todos.map( ({title, task, id}) => `
     <div class="col card w-50">
     <div class="card-body">
       <h5 class="card-title">${title}</h5>
