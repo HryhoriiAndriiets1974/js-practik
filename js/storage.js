@@ -29,7 +29,25 @@ const load = key => {
   }
 };
 
+
+/**
+ *
+ * @param {*} key
+ * @returns
+ */
+const remove = key => {
+  try {
+    const serializedState = localStorage.getItem(key);
+    return serializedState === null
+    ? console.log('The local storage has no record with this key')
+    : localStorage.removeItem(key);
+  } catch(error) {
+    console.error('Remove state error: ', error.message);
+  }
+};
+
 export default {
   save,
   load,
+  remove
 };
