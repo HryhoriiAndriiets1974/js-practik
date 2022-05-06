@@ -103,3 +103,34 @@ refs.ul.addEventListener('click', handleListClick);
 
 loadData();
 renderList();
+
+// ================================== question
+// -------- question --------
+// const person = {
+//   age: 10,
+
+//   setAge(newAge) {
+//     this.age = newAge;
+//   },
+
+//   refreshAge(userId) {
+// const context = this;
+//
+//     fetchAgeFromDb(function (newAge) {
+
+  //  // було this.setAge(newAge); і була помилка про втрату контексту
+  //  // Гері ввів проміжну смінну context і додав стічку, що трохи вище
+  // // а саме const context = this;
+
+//       context.setAge(newAge);
+//     });
+//   },
+// };
+
+// function fetchAgeFromDb(cb) {
+//   cb(20);
+// }
+
+// person.refreshAge();
+
+// console.log(person.age);
