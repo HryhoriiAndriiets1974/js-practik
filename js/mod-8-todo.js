@@ -26,7 +26,8 @@ const refs = {
 
 const loadData = () => {
   try {
-    localStorage.getItem('todos', JSON.parse(items));
+    // localStorage.getItem('todos', JSON.parse(items));
+    items = JSON.parse(localStorage.getItem('todos'));
   } catch(error) {
     items = [];
     console.log(error.message);
