@@ -54,7 +54,7 @@ const arrayMethods = [
 const methodEl = document.querySelector('.method');
 
 const itemTemplate = ({ id, text }) => `
-<li data-id="${id}" list-style="none">
+<li data-id="${id}">
     <h3>${text}</h3>
 </li>`;
 
