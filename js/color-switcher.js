@@ -4,6 +4,7 @@ const bodyColor = document.querySelector("body");
 
 let timerId = null;
 
+bodyColor.classList.add('switcher');
 bodyColor.style.textAlign = "center";
 stopBtn.setAttribute('disabled', true);
 function getRandomHexColor() {

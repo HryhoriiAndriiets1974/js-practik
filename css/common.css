@@ -16,3 +16,41 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* color-switcher */
+
+.switcher {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.switcher header {
+  margin-bottom: 150px;
+}
+
+.switcher [data-start],
+.switcher [data-stop] {
+  width: 100px;
+  height: 50px;
+  font-weight: 900;
+  font-size: 1.25rem;
+  border: 3px solid gold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 300ms linear, color 300ms linear;
+}
+
+.switcher [data-start]:not(:disabled):hover,
+.switcher [data-stop]:not(:disabled):hover {
+  color: blueviolet;
+  background-color: greenyellow;
+}
+
+.switcher [data-start]:disabled,
+.switcher [data-stop]:disabled {
+  color: inherit;
+  cursor: not-allowed;
+}
