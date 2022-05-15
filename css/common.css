@@ -17,6 +17,36 @@ img {
   max-width: 100%;
 }
 
+/* clock switcher */
+
+.clock_switcher {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.clock_switcher header {
+  margin-bottom: 150px;
+}
+
+.clock_switcher [data-st] {
+  width: 150px;
+  height: 50px;
+  font-weight: 900;
+  font-size: 1.25rem;
+  border: 3px solid gold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 300ms linear, color 300ms linear;
+}
+
+.clock_switcher [data-st]:not(:disabled):hover {
+  color: blueviolet;
+  background-color: greenyellow;
+}
+
 /* color-switcher */
 
 .switcher {
