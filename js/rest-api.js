@@ -1,6 +1,45 @@
 const fetchUsersBtn = document.querySelector(".btn");
 const fetchPostBtn = document.querySelector(".btn-post");
+const fetchCarBtn = document.querySelector(".btn-car");
 const userList = document.querySelector(".user-list");
+
+// ==================   pixabay
+
+  // fetch ('https://pixabay.com/api/?key=27420856-25c3041aa641ff2b15189544b&q=car&image_type=photo')
+  // .then(r => r.json())
+  // .then(console.log);
+
+  // fetchCarBtn.addEventListener("click", () => {
+  //   fetchCars()
+  //     .then((hits) => renderCarList(hits))
+  //     .catch((error) => console.log(error));
+  // });
+
+  // function fetchCars() {
+  //   return fetch("https://pixabay.com/api/?key=27420856-25c3041aa641ff2b15189544b&q=car&image_type=photo").then(
+  //     (response) => {
+  //       if (!response.ok) {
+  //         throw new Error(response.status);
+  //       }
+  //       return response.json();
+  //     }
+  //   );
+  // }
+
+  // function renderCarList(hits) {
+  //   userList.innerHTML = "";
+  //   const markup = hits
+  //     .map((hit) => {
+  //       return `<li>
+  //           <p><b>Id</b>: ${hit.id}</p>
+  //           <p><b>URL:</b>: ${hit.pageURL}</p>
+  //           <p><b>Type:</b>: ${hit.type}</p>
+  //           <p><b>Tags:</b>: ${hit.tags}</p>
+  //         </li>`;
+  //     })
+  //     .join("");
+  //   userList.innerHTML = markup;
+  // }
 
 // posts
 
