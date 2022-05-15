@@ -21,6 +21,7 @@ const sliceR = [0, 1, 2, 3].slice(1,3); console.log(`[0, 1, 2, 3].slice(1,3)  =>
 const someR = [1, 2, 3].some(n => n>2); console.log(`[1, 2, 3].some(n => n>2)  => ${someR}`);
 const sortR = [2, 1, 0, -1, 3].sort(); console.log(`[2, 1, 0, -1, 3].sort()  => [${sortR}]`);
 const spliceR = [0, 1, 2, 4].splice(1,3); console.log(`[0, 1, 2, 4].splice(1,3)  => [${spliceR}]`);
+const splitR = 'Mango'.split(''); console.log(`'Mango'.split('')  => [${splitR}]`);
 const toStringR = ['0', 'a', 1, '4'].toString(); console.error(`['0', 'a', 1, '4'].toString()  => "${toStringR}"`);
 const unshiftR = [1, 2, 3].unshift(4); console.error(`[1, 2, 3].unshift(4)  => [${unshiftR}]`);
 
@@ -47,8 +48,9 @@ const arrayMethods = [
   { id: '20', metodR: someR, text: `[1, 2, 3].some(n => n>2)  => ${someR}`},
   { id: '21', metodR: sortR, text: `[2, 1, 0, -1, 3].sort()  => [${sortR}]`},
   { id: '22', metodR: spliceR, text: `[0, 1, 2, 4].splice(1,3)  => [${spliceR}]`},
-  { id: '23', metodR: toStringR, text: `['0', 'a', 1, '4'].toString()  => "${toStringR}"`},
-  { id: '24', metodR: unshiftR, text: `[1, 2, 3].unshift(4)  => [${unshiftR}]`},
+  { id: '23', metodR: splitR, text: `'Mango'.split('')   => [${splitR}]`},
+  { id: '24', metodR: toStringR, text: `['0', 'a', 1, '4'].toString()  => "${toStringR}"`},
+  { id: '25', metodR: unshiftR, text: `[1, 2, 3].unshift(4)  => [${unshiftR}]`},
 ];
 
 const methodEl = document.querySelector('.method');
