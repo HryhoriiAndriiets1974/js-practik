@@ -9,37 +9,39 @@ const userList = document.querySelector(".user-list");
   // .then(r => r.json())
   // .then(console.log);
 
-  // fetchCarBtn.addEventListener("click", () => {
-  //   fetchCars()
-  //     .then((hits) => renderCarList(hits))
-  //     .catch((error) => console.log(error));
-  // });
+  fetchCarBtn.addEventListener("click", () => {
+    fetchCars()
+      .then((results) => renderCarList(results))
+      .catch((error) => console.log(error));
+  });
 
-  // function fetchCars() {
-  //   return fetch("https://pixabay.com/api/?key=27420856-25c3041aa641ff2b15189544b&q=car&image_type=photo").then(
-  //     (response) => {
-  //       if (!response.ok) {
-  //         throw new Error(response.status);
-  //       }
-  //       return response.json();
-  //     }
-  //   );
-  // }
+  function fetchCars() {
+    return fetch("https://pixabay.com/api/?key=27420856-25c3041aa641ff2b15189544b&q=car&image_type=photo").then(
+      (response) => {
+        if (!response.ok) {
+          throw new Error(response.status);
+        }
+        return response.json();
+      }
+    );
+  }
 
-  // function renderCarList(hits) {
-  //   userList.innerHTML = "";
-  //   const markup = hits
-  //     .map((hit) => {
-  //       return `<li>
-  //           <p><b>Id</b>: ${hit.id}</p>
-  //           <p><b>URL:</b>: ${hit.pageURL}</p>
-  //           <p><b>Type:</b>: ${hit.type}</p>
-  //           <p><b>Tags:</b>: ${hit.tags}</p>
-  //         </li>`;
-  //     })
-  //     .join("");
-  //   userList.innerHTML = markup;
-  // }
+  function renderCarList(results) {
+    userList.innerHTML = "";
+    const {hits} = results;
+    console.dir(hits);
+    const markup = hits
+      .map((hit) => {
+        return `<li>
+            <p><b>Id</b>: ${hit.id}</p>
+            <p><b>URL:</b>: ${hit.pageURL}</p>
+            <p><b>Type:</b>: ${hit.type}</p>
+            <p><b>Tags:</b>: ${hit.tags}</p>
+          </li>`;
+      })
+      .join("");
+    userList.innerHTML = markup;
+  }
 
 // posts
 
@@ -107,3 +109,32 @@ function renderUserList(users) {
     .join("");
   userList.innerHTML = markup;
 }
+
+// ======================== builder
+// class StringBuilder {
+//   constructor(initialValue) {
+//     this.value = initialValue;
+//   }
+//   getValue() {
+//     return this.value;
+//   }
+//   padStart(start) {
+//     this.value = start + this.value;
+//   }
+//   padEnd(end) {
+//     this.value += end;
+//   }
+//   padBoth(both) {
+//     this.value = both + this.value + both;
+//   }
+// }
+// // Change code above this line
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+// ================================
