@@ -16,6 +16,7 @@ const refs = {
   ul: document.querySelector('ul'),
   form: document.querySelector('form'),
   loader: document.getElementById('loader'),
+  btnNew: document.querySelector('.btn-new'),
 };
 
 const showLoader = () => {
@@ -140,5 +141,6 @@ const loadAndRender = () => {
 
 refs.form.addEventListener('submit', handleSubmit);
 refs.ul.addEventListener('click', handleListClick);
+refs.btnNew.addEventListener('click', loadAndRender);
 
 loadAndRender();

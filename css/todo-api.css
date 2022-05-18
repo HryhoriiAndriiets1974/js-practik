@@ -1,5 +1,6 @@
 body {
   font-size: 20px;
+  text-align: center;
 }
 .form {
   border: 1px solid green;
@@ -20,6 +21,7 @@ ul {
 
 li {
   list-style: none;
+  text-align: start;
   border: 1px solid green;
   border-radius: 5px;
   margin-bottom: 3px;
@@ -41,5 +43,11 @@ li {
 
 .btn-add {
   background-color: chartreuse;
+  border-radius: 5px;
+}
+
+.btn-new {
+  margin-bottom: 10px;
+  background-color: rgb(0, 110, 255);
   border-radius: 5px;
 }
