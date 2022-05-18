@@ -19,7 +19,7 @@ ul {
 }
 
 li {
-
+  list-style: none;
   border: 1px solid green;
   border-radius: 5px;
   margin-bottom: 3px;
