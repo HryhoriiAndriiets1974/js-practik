@@ -7,7 +7,7 @@ const itemTemplate = ({ id, isDone, text }) => `
     <input type="checkbox" ${isDone ? 'checked' : ''} />
     <span>${text}</span>
   </label>
-  <button>x</button>
+  <button class="btn-del">x</button>
 </li>`;
 
 let items = [];

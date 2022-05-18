@@ -1,0 +1,45 @@
+body {
+  font-size: 20px;
+}
+.form {
+  border: 1px solid green;
+  padding: 10px;
+}
+
+.bg1 {
+  background-color: beige;
+}
+
+.bg2 {
+  background-color: blanchedalmond;
+}
+
+ul {
+  background-color: beige;
+}
+
+li {
+
+  border: 1px solid green;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+
+#loader {
+  display: none;
+}
+
+#loader.show {
+  display: block;
+}
+
+.btn-del {
+  color: blue;
+  background-color: rgb(215, 93, 93);
+  border-radius: 5px;
+}
+
+.btn-add {
+  background-color: chartreuse;
+  border-radius: 5px;
+}
