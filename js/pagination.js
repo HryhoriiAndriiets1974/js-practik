@@ -6,7 +6,7 @@ let isAlertVisible = false;
 // Controls the group number
 let page = 1;
 // Controls the number of items in the group
-let limit = 20;
+let limit = 50;
 // In our case total number of pages is calculated on frontend
 const totalPages = 100 / limit;
 
